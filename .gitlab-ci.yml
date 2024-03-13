@@ -1,0 +1,14 @@
+# This folder is cached between builds
+# http://docs.gitlab.com/ee/ci/yaml/README.html#cache
+cache:
+  paths:
+    - node_modules/
+build:
+  only:
+    - main
+  tags:
+    - deploy
+  script:
+    - docker login -u $DEPLOY_LOGIN -p $DEPLOY_TOKEN registry.gitlab.com
+    - docker build -t registry.gitlab.com/rma_smi/admin .
+    - docker push registry.gitlab.com/rma_smi/admin

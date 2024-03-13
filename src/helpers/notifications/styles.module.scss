@@ -1,0 +1,29 @@
+.flashComponent {
+  @apply p-5 pl-6 pr-12 shadow-lg bg-white text-lg cursor-pointer fixed z-50 right-0 top-0 transition duration-300 opacity-0;
+  max-width: 300px;
+
+  &::after {
+    @apply absolute opacity-50;
+    content: "";
+    right: 10px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background: url(img/notification-cross.svg);
+  }
+
+  &.__error {
+    @apply bg-red-400 text-white;
+    &::after {
+      background: url(img/notification-cross-white.svg);
+    }
+  }
+
+  &.__visible {
+    @apply opacity-100;
+  }
+}
+
+.title {
+  @apply font-bold mb-2 text-xl;
+}

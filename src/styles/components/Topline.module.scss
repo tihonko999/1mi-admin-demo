@@ -1,0 +1,16 @@
+.topline {
+  @apply flex bg-gray-800 overflow-auto;
+}
+.link {
+  @apply cursor-pointer text-gray-400 px-4 py-4 transition duration-200 whitespace-nowrap hover:text-gray-100;
+  &[class*="router-link-active"] {
+    @apply text-gray-100;
+  }
+}
+.num {
+  @apply absolute rounded-full bg-red-800 flex items-center justify-center text-white font-bold text-xs;
+  width: 20px;
+  height: 20px;
+  right: 5px;
+  top: 5px;
+}

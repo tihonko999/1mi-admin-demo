@@ -1,0 +1,7 @@
+version: "3"
+services:
+  newizv_admin:
+    build: .
+    # image: registry.gitlab.com/rma_smi/admin
+    ports:
+      - "4000:4000"

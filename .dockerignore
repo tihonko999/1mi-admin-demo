@@ -1,0 +1,14 @@
+.DS_Store
+.git
+/config
+/dist
+/lib
+/log
+node_modules
+/.gitignore
+/.ruby-version
+/Capfile
+docker-compose.yaml
+Dockerfile
+Gemfile
+Gemfile.lock
