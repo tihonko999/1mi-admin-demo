@@ -1,0 +1,41 @@
+import { State } from "./index";
+
+export const defaultState: State = {
+  timezone: "",
+  matter_types: [],
+  platforms: [],
+  roles: [],
+  statuses: [],
+  permissions: [],
+  users: [],
+  templates: [],
+  notifications_count: 0,
+  available_admin_modules: [],
+  orderOptions: [
+    { id: "created_at,desc", title: "По дате создания ↓" },
+    { id: "created_at,asc", title: "По дате создания ↑" },
+    { id: "updated_at,desc", title: "По дате изменения ↓" },
+    { id: "updated_at,asc", title: "По дате изменения ↑" },
+    { id: "published_at,desc", title: "По дате публикации ↓" },
+    { id: "published_at,asc", title: "По дате публикации ↑" },
+  ],
+  loggedIn: false,
+  user: {
+    authorization: "",
+    created_at: "",
+    first_name: "",
+    full_name: "",
+    id: 0,
+    is_active: true,
+    last_name: "",
+    platform_ids: [],
+    role: {
+      id: 0,
+      is_admin: false,
+      permissions: [],
+      rank: 0,
+      title: "",
+    },
+    updated_at: "",
+  },
+};

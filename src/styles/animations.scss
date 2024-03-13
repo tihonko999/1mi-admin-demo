@@ -1,0 +1,19 @@
+// fade
+.fade-enter-from,
+.fade-leave-to {
+  @apply opacity-0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+// fade-up
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.35s;
+}
+.fade-up-enter-from,
+.fade-up-leave-to {
+  @apply opacity-0;
+  transform: translateY(-20px);
+}

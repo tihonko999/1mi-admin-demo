@@ -1,0 +1,22 @@
+.loading {
+  @apply relative;
+  height: 50px;
+  margin: 50px 0;
+  @keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  &::after {
+    @apply absolute top-0;
+    content: "";
+    height: 50px;
+    width: 50px;
+    background: no-repeat url(img/loading.svg) center / contain;
+    left: calc(50% - 25px);
+    animation: spin 0.8s infinite;
+  }
+}

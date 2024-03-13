@@ -1,0 +1,60 @@
+{
+  "name": "vite-tsx",
+  "version": "0.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "dev": "VITE_DOMAIN=newizv.devmi.ru vite --port 4000",
+    "build": "tsc --noEmit && vite build",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx,vue}\"",
+    "typecheck": "tsc --noEmit",
+    "deploy": "ssh deployer@еtest /data/docker/update.sh"
+  },
+  "pre-commit": [
+    "typecheck",
+    "lint"
+  ],
+  "dependencies": {
+    "date-fns-tz": "^1.1.6",
+    "express": "^4.17.1",
+    "minimist": "^1.2.5",
+    "postcss": "^8.4.35",
+    "prom-client": "^13.1.0",
+    "tailwindcss": "^3.4.1"
+  },
+  "devDependencies": {
+    "@tinymce/tinymce-vue": "^4.0.4",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__traverse": "^7.20.5",
+    "@types/lodash.debounce": "^4.0.6",
+    "@types/node": "^16.4.10",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vitejs/plugin-vue-jsx": "^1.1.7",
+    "@vue/compiler-sfc": "^3.0.5",
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "cropperjs": "^1.5.12",
+    "date-fns": "^2.23.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-vue": "^7.15.1",
+    "litepicker": "^2.0.11",
+    "lodash.debounce": "^4.0.8",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.3.2",
+    "sass": "^1.37.0",
+    "typescript": "^4.4.2",
+    "vite": "2.6",
+    "vite-plugin-pages": "0.18",
+    "vue": "3",
+    "vue-router": "^4.0.10",
+    "vue-tsc": "^0.2.2",
+    "vuedraggable": "^4.1.0",
+    "vuex": "^4.0.2"
+  }
+}

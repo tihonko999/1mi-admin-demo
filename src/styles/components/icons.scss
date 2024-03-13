@@ -1,0 +1,20 @@
+.m-icon {
+  @apply font-normal inline-block not-italic leading-none normal-case whitespace-nowrap;
+  font-family: "Material Icons", sans-serif;
+  font-size: 24px;
+  letter-spacing: normal;
+  word-wrap: normal;
+  direction: ltr;
+  // Support for all WebKit browsers
+  -webkit-font-smoothing: antialiased;
+  // Support for Safari and Chrome
+  text-rendering: optimizeLegibility;
+  // Support for Firefox
+  -moz-osx-font-smoothing: grayscale;
+  &.__large {
+    font-size: 36px;
+  }
+  &.__small {
+    font-size: 18px;
+  }
+}
